@@ -11,3 +11,145 @@ h1, h2 {
   color: inherit;
   line-height: inherit;
 }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-navigation {
+  float: left;
+  width: 780px;
+}
+
+.user-block {
+  float: right;
+  width: 140px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.index-logo {
+  width: 368px;
+  height: 204px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.features {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-content {
+  padding: 50px 80px;
+  margin-bottom: 35px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+}
+
+.main-footer {
+  margin-top: 65px;
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+  margin-right: 80px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 160px;
+}
+
+.breadcrumbs {
+  margin-bottom: 60px;
+}
+
+.filters {
+  float: left;
+  width: 220px;
+}
+
+.goods {
+  float: right;
+  width: 700px;
+}
+
+.goods-items {
+  font-size: 0;
+}
+
+.goods-item {
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.goods-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.pagination {
+  margin-top: 45px;
+}
+
+.item-images {
+  float: left;
+  width: 460px;
+}
+
+.item-data {
+    float: right;
+    width: 390px;
+}
+
+.current-image {
+  margin-bottom: 20px;
+}
+
+.images-list {
+    font-size: 0;
+}
+
+.images-list img {
+  margin-right: 20px;
+}
+
+.images-list img:last-child {
+  margin-right: 0;
+}
