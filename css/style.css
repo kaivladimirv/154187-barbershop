@@ -10,12 +10,12 @@ body {
 
   text-transform: uppercase;
 
-  background: #ffffff url("/img/shop_background.jpg") repeat;
+  background: #ffffff url("../img/shop_background.jpg") repeat;
 }
 
 body.main-page {
   color: #ffffff;
-  background: #000000 url("/img/main_background.jpg") no-repeat center top;
+  background: #000000 url("../img/main_background.jpg") no-repeat center top;
 }
 
 h1, h2 {
@@ -24,6 +24,11 @@ h1, h2 {
   font-family: inherit;
   color: inherit;
   line-height: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .clearfix::after {
@@ -82,7 +87,7 @@ h1, h2 {
   text-decoration: none;
 }
 
-.main-navigation a:hover {
+.main-navigation a[href]:not(.logo):hover {
   background: #242424;
 }
 
@@ -107,6 +112,8 @@ h1, h2 {
 .user-block {
   float: right;
   max-width: 140px;
+
+  word-break: break-all;
 }
 
 .login {
@@ -138,7 +145,7 @@ h1, h2 {
     width: 18px;
     height: 18px;
 
-    background: transparent url("/img/sprite.png") no-repeat;
+    background: transparent url("../img/sprite.png") no-repeat;
     background-position: -10px -334px;
 
     opacity: 0.3;
@@ -213,8 +220,8 @@ h1, h2 {
 
   color: #000000;
 
-  background: url("/img/separator_index_content.png") no-repeat center,
-    #f8f5f2 url("/img/pattern_index_content.jpg")
+  background: url("../img/separator_index_content.png") no-repeat center,
+    #f8f5f2 url("../img/pattern_index_content.jpg")
 }
 
 .index-content-left {
@@ -234,9 +241,17 @@ h1, h2 {
   line-height: 42px;
 }
 
+.photo-gallery .index-content-title {
+  margin-bottom: 22px;
+}
+
 .index-content p {
   margin: 0;
   margin-bottom: 20px;
+}
+
+.index-content-right p {
+  margin-bottom: 22px;
 }
 
 .news-preview {
@@ -303,7 +318,7 @@ h1, h2 {
 .gallery {
   position: relative;
 
-  height: 262px;
+  height: 260px;
 }
 
 .gallery-content {
@@ -330,9 +345,14 @@ h1, h2 {
   right: 0;
 }
 
+.contacts p:last-of-type {
+  margin-bottom: 22px;
+}
+
 .appointment-form input {
   float: left;
   width: 106px;
+
   margin-right: 20px;
   margin-bottom: 20px;
   padding: 7px 15px;
@@ -356,19 +376,46 @@ h1, h2 {
   margin-right: 0;
 }
 
+.appointment-form input:nth-child(1),
+.appointment-form input:nth-child(2) {
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
+.appointment-form input:nth-child(3),
+.appointment-form input:nth-child(4) {
+  padding-top: 6px;
+  padding-bottom: 9px;
+}
+
 .appointment-form .btn {
   clear: both;
   width: 100%;
 }
 
 .main-footer {
-  margin-top: 65px;
+  margin-top: 48px;
   padding-top: 60px;
   padding-bottom: 40px;
 
   color: #ffffff;
 
-  background: #232323 url("/img/pattern_main_footer.jpg");
+  background: #232323 url("../img/pattern_main_footer.jpg");
+}
+
+.main-page .main-footer {
+  margin-top: 65px;
+  padding-top: 58px;
+}
+
+.shop-page .main-footer,
+.page-price-list .main-footer {
+  padding-top: 56px;
+}
+
+.item-page .main-footer {
+  margin-top: 37px;
+  padding-top: 56px;
 }
 
 .footer-contacts {
@@ -407,7 +454,7 @@ h1, h2 {
   vertical-align: top;
   text-decoration: none;
 
-  background: #000000 url("/img/sprite.png") no-repeat center;
+  background: #000000 url("../img/sprite.png") no-repeat center;
 }
 
 .social-btn:hover {
@@ -580,7 +627,7 @@ h1, h2 {
   width: 20px;
   height: 20px;
 
-  background: transparent url("/img/sprite.png") no-repeat;
+  background: transparent url("../img/sprite.png") no-repeat;
   background-position: -10px -10px;
 }
 
@@ -604,7 +651,7 @@ h1, h2 {
   width: 20px;
   height: 20px;
 
-  background: transparent url("/img/sprite.png") no-repeat;
+  background: transparent url("../img/sprite.png") no-repeat;
   background-position: -10px -370px;
 }
 
@@ -813,4 +860,366 @@ h1, h2 {
 
 .item-detail {
   padding-top: 7px;
+}
+
+.page-price-list .breadcrumbs {
+  margin-bottom: 45px;
+
+  line-height: 24px;
+}
+
+
+.inner-content {
+  margin-bottom: 75px;
+}
+
+.inner-content h2 {
+  margin-top: 53px;
+  margin-bottom: 28px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 8px 15px;
+
+  border: 2px solid #000000;
+}
+
+.big-heading {
+  margin-bottom: 60px;
+
+  text-align: center;
+}
+
+.big-heading h2 {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px;
+
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+
+  background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.big-heading::after {
+  content: "";
+  position: relative;
+  top: -25px;
+  z-index: 1;
+
+  display: block;
+
+  border-bottom: 2px solid #000000;
+}
+
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.prices-table {
+  width: 100%;
+}
+
+.prices-table td {
+  width: 50%;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+.short-text {
+  padding-right: 80px;
+}
+
+.inner-columns {
+  margin: 53px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+  width: 460px;
+}
+
+.inner-column-left {
+  float: left;
+}
+
+.inner-column-right {
+  float: right;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+  margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+  margin-bottom: 0;
+}
+
+.inner-column-left h2 {
+  margin-bottom: 25px;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+
+  display: none;
+  width: 300px;
+
+  padding: 50px 80px;
+
+  color: #000000;
+
+  background: #f8f5f2 url("../img/pattern_index_content.jpg");
+
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+  transform: translateX(-50%);
+}
+
+.modal-dialog-title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+
+  margin-top: 7px;
+  margin-right: -40px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.modal-dialog-close::before,
+.modal-dialog-close::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+
+  width: 5px;
+  height: 25px;
+
+  background: #d0d0d0;
+}
+
+.modal-dialog-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-dialog-close::after {
+  transform: rotate(-45deg);
+}
+
+.login-form {
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background: url("../img/sprite.png") no-repeat;
+  background-position: 100% -435px;
+}
+
+.login-form input.icon-password {
+  background: url("../img/sprite.png") no-repeat;
+  background-position: 100% -286px;
+}
+
+.login-form .restore {
+  float: right;
+
+  color: #000000;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.login-form  input[type="checkbox"] {
+  display: none;
+}
+
+.login-checkbox {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+
+  width: 15px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 780px;
+  height: 575px;
+
+  box-sizing: border-box;
+
+  background: #e9e5dc url("../img/map.jpg") no-repeat;
+  background-size: cover;
+
+  border: 7px solid white;
+
+  box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.69);
+
+  transform: translate(-50%, -50%);
+}
+
+.map.is-show {
+  display: block;
+  animation-name: map-show;
+  animation-duration: 0.5s;
+}
+
+@keyframes map-show {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 780px;
+    opacity: 1;
+  }
+}
+
+.modal-dialog.is-show {
+  display: block;
+  animation-name: login-show;
+  animation-duration: 0.5s;
+}
+
+@keyframes login-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
