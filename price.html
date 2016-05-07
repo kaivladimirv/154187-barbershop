@@ -26,7 +26,7 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="login" href="#">Вход</a>
+          <a class="login js-btn-open-login-form" href="#">Вход</a>
         </div>
       </div>
     </header>
@@ -105,5 +105,28 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-dialog js-modal-dialog-login">
+      <button class="modal-dialog-close js-btn-close-login-form" type="button" title="Закрыть"></button>
+      <h2 class="modal-dialog-title">Личный кабинет</h2>
+
+      <form class="login-form js-login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>Введите пожалуйста свой логин и пароль</p>
+
+        <input class="icon-user" type="text" name="login" placeholder="Логин">
+        <input class="icon-password" type="password"  name="password" placeholder="Пароль">
+
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+
+        <button class="btn" type="submit">Войти</button>
+      </form>
+    </div>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>

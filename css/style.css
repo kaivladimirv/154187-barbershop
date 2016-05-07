@@ -1003,6 +1003,7 @@ img {
 
 .modal-dialog {
   position: absolute;
+  z-index: 10;
   top: 120px;
   left: 50%;
 

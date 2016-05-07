@@ -1,8 +1,3 @@
-var map = document.querySelector('.js-map');
-var btnOpenMap = document.querySelector('.js-btn-open-map');
-var btnCloseMap = document.querySelector('.js-btn-close-map');
-var btnCloseDialog = document.querySelectorAll('.js-modal-dialog-close');
-
 var dialogLogin = document.querySelector('.js-modal-dialog-login');
 var btnOpenDialogLogin = document.querySelector('.js-btn-open-login-form');
 var btnCloseDialogForm = document.querySelector('.js-btn-close-login-form');
@@ -10,22 +5,7 @@ var formLogin = dialogLogin.querySelector('form');
 var login = formLogin.querySelector('input[name="login"]');
 var password = formLogin.querySelector('input[name="password"]');
 
-
-btnOpenMap.addEventListener('click', function (event) {
-  event.preventDefault();
-
-  if (!map.classList.contains('is-show')) {
-    map.classList.add('is-show');
-  }
-
-});
-
-btnCloseMap.addEventListener('click', function (event) {
-  event.preventDefault();
-
-  map.classList.remove('is-show');
-
-});
+initMap ();
 
 btnOpenDialogLogin.addEventListener('click', function (event) {
   event.preventDefault();
@@ -55,3 +35,29 @@ window.addEventListener('keydown', function(event) {
     dialogLogin.classList.remove('is-show');
   }
 });
+
+function initMap () {
+  var map = document.querySelector('.js-map');
+  if (!map) {
+      return;
+  }
+
+  var btnOpenMap = document.querySelector('.js-btn-open-map');
+  var btnCloseMap = document.querySelector('.js-btn-close-map');
+
+  btnOpenMap.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (!map.classList.contains('is-show')) {
+      map.classList.add('is-show');
+    }
+
+  });
+
+  btnCloseMap.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    map.classList.remove('is-show');
+
+  });
+}
